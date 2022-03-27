@@ -9,20 +9,24 @@ namespace WebApiCarros.Controllers
     public class ClasesController : ControllerBase
     {
         private readonly AplicationDbContext dbContext;
-        public ClasesController(AplicationDbContext context)
+        private readonly ILogger<ClasesController> log;
+        public ClasesController(AplicationDbContext context, ILogger<ClasesController> log)
         {
             this.dbContext = context;
+            this.log = log;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Clase>>> GetAll()
         {
+            log.LogInformation("Obtener listado de clases");
             return await dbContext.Clases.ToListAsync();
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Clase>> GetById(int id)
         {
+            log.LogInformation("El ID es: " + id);
             return await dbContext.Clases.FirstOrDefaultAsync(x => x.Id == id);
         }
 
@@ -68,6 +72,9 @@ namespace WebApiCarros.Controllers
             {
                 return NotFound("El recurso no fue encontrado.");
             }
+
+            //var validateRelation = await dbContext.CarroClase.AnyAsync
+
             dbContext.Remove(new Clase { Id = id });
             await dbContext.SaveChangesAsync();
             return Ok();

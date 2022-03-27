@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "CyzGkNLvA1cnWUmHzsFKzbtMmFnROVbjW48mblXK9HA=",
+  "Hash": "JckBgpaHOkLTxenvL0yHDaZppW7bq3iHCny+ZACXmto=",
   "Source": "WebApiCarros",
   "BasePath": "_content/WebApiCarros",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApiCarros\\wwwroot",
+      "Source": "WebApiCarros",
+      "ContentRoot": "C:\\Users\\yahir\\Desktop\\LCC\\6to_SEMESTRE\\Backend\\VS_AspNetCoreWebApi\\WebApiCarros\\WebApiCarros\\wwwroot\\",
+      "BasePath": "_content/WebApiCarros",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\yahir\\Desktop\\LCC\\6to_SEMESTRE\\Backend\\VS_AspNetCoreWebApi\\WebApiCarros\\WebApiCarros\\wwwroot\\Frase.txt",
+      "SourceId": "WebApiCarros",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\yahir\\Desktop\\LCC\\6to_SEMESTRE\\Backend\\VS_AspNetCoreWebApi\\WebApiCarros\\WebApiCarros\\wwwroot\\",
+      "BasePath": "_content/WebApiCarros",
+      "RelativePath": "Frase.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Frase.txt"
+    }
+  ]
 }
